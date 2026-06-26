@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine Spaces | Professional Cleaning Services</title>
+    <style>
+        /* Color Variables */
+        :root {
+            --color-light-greige: #c7b8a4;
+            --color-sand: #ccb68e;
+            --color-tan: #a88c6c;
+            --color-muted-teal: #5a7c83;
+            --color-deep-teal: #2c444D;
+            --color-white: #ffffff;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-white);
+            color: var(--color-deep-teal);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: var(--color-deep-teal);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--color-muted-teal);
+            color: var(--color-white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-white);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--color-white);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-sand);
+        }
+
+        .btn {
+            background-color: var(--color-tan);
+            color: var(--color-white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--color-deep-teal);
+            color: var(--color-white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--color-light-greige);
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .btn-primary {
+            background-color: var(--color-muted-teal);
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        .hero .btn-primary:hover {
+            background-color: var(--color-deep-teal);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+            text-align: center;
+            background-color: var(--color-white);
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--color-sand);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-deep-teal);
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            background-color: var(--color-light-greige);
+            padding: 5rem 5%;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .why-us-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .why-us-content ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .why-us-content ul li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .why-us-content ul li::before {
+            content: "✓";
+            color: var(--color-muted-teal);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .why-us-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: var(--color-tan); /* Placeholder for an actual image */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-deep-teal);
+            color: var(--color-white);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* In a real build, add a hamburger menu here */
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .why-us {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Pristine Spaces</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="btn">Get a Quote</button>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Spotless Cleaning, Stress-Free Living</h1>
+        <p>Professional residential and commercial cleaning services tailored to your needs. Let us do the dirty work so you can focus on what matters.</p>
+        <button class="btn btn-primary">Book Your Cleaning Today</button>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Residential Cleaning</h3>
+                <p>Standard and deep cleaning for homes, apartments, and condos. We treat your space with the utmost care and respect.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Cleaning</h3>
+                <p>Keep your office or retail space pristine. We provide flexible schedules to maintain a professional environment.</p>
+            </div>
+            <div class="service-card">
+                <h3>Move-In / Move-Out</h3>
+                <p>Transitioning to a new space? Our deep cleaning ensures your old or new home is completely spotless.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us" id="about">
+        <div class="why-us-content">
+            <h2>Why Choose Pristine Spaces?</h2>
+            <p>We believe a clean environment is the foundation of a happy life and a productive business. Our dedicated team goes above and beyond to deliver exceptional results.</p>
+            <ul>
+                <li>Fully Licensed, Bonded, and Insured</li>
+                <li>Eco-Friendly Cleaning Products Available</li>
+                <li>Trusted and Vetted Professionals</li>
+                <li>100% Satisfaction Guarantee</li>
+            </ul>
+        </div>
+        <div class="why-us-image">
+            [Insert Cleaning Image Here]
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Pristine Spaces Cleaning Co. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
